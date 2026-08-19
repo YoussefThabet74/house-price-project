@@ -1,0 +1,11 @@
+--- Model Evaluation ---
+[Linear Regression]
+  MAE:  2,703.32
+  RMSE: 44,374.10
+  R2:   0.0049
+
+[Random Forest]
+  MAE:  1,228.01
+  RMSE: 44,766.05
+  R2:   -0.0128
+

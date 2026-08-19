@@ -1,0 +1,16 @@
+# Core Data Science & ML Dependencies
+pandas
+numpy
+scikit-learn
+jupyter
+matplotlib
+seaborn
+
+# Backend Dependencies (FastAPI)
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+joblib
+pytest
+httpx

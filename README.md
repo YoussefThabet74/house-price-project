@@ -170,9 +170,9 @@ curl -X 'POST' `
   -d '{
   "location": "mumbai",
   "carpet_area_sqft": 1200,
+  "bathroom": 3,
+  "balcony": 2,
   "floor_num": 2,
-  "bathroom": 2,
-  "balcony": 1,
   "furnishing": "Semi-Furnished",
   "transaction": "Resale",
   "ownership": "Freehold",

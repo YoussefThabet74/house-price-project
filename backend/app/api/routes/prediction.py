@@ -27,9 +27,9 @@ valid_locations = locations_dict["locations"]
 class PredictionRequest(BaseModel):
     location: str
     carpet_area_sqft: float
-    floor_num: int
     bathroom: int
     balcony: int
+    floor_num: int
     furnishing: str = "Semi-Furnished"
     transaction: str = "Resale"
     ownership: str = "Freehold"

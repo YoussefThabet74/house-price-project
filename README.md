@@ -16,22 +16,19 @@ A complete end-to-end machine learning product that predicts house prices based 
 house-price-project/
 ├── .venv/                      # Python Virtual Environment
 ├── backend/                    # FastAPI Backend Application
-│   ├── app/                    # API routes, core logic, schemas, services
-│   ├── models/                 # Backend model directory
+│   ├── app/                    # API routes, core logic, models, and services
 │   ├── tests/                  # Pytest test suite
 │   ├── .env.example
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/                   # React + Vite Frontend Application
-│   ├── node_modules/
+│   ├── node_modules/           # Frontend dependencies
 │   ├── public/
 │   ├── src/                    # UI Components, pages, api client
 │   ├── .env
 │   ├── index.html
 │   ├── package.json
 │   └── vite.config.ts
-├── models/                     # Root models directory
-│   └── locations.json
 ├── notebooks/                  # ML Development Layer
 │   ├── data/                   # Dataset directory
 │   ├── house_price_model.ipynb # Jupyter Notebook for training
@@ -40,7 +37,9 @@ house-price-project/
 ├── screenshots/                # Project UI & API Screenshots
 │   ├── backend-swagger-1.png
 │   ├── backend-swagger-2.png
-│   ├── frontend-form.png
+│   ├── backend-swagger-3.png
+│   ├── frontend-home.png
+│   ├── frontend-input-form.png
 │   └── frontend-result.png
 ├── .gitignore
 ├── my_old_env.txt              # Environment backup reference
@@ -79,7 +78,7 @@ Create the required environment variables before running the application.
 ### 1. Clone the Repository
 
 ```powershell
-git clone https://github.com/YoussefThabet74/house-price-project.git
+git clone [https://github.com/YoussefThabet74/house-price-project.git](https://github.com/YoussefThabet74/house-price-project.git)
 cd house-price-project
 ```
 
@@ -100,11 +99,22 @@ pytest backend/tests/
 
 ### Frontend Production Build Check
 
-Navigate to the frontend directory and run the TypeScript/Vite build process to verify there are no compilation or type errors:
+Run the TypeScript/Vite build process to verify there are no compilation or type errors:
 
-````powershell
+💡 **Hint:** Use the appropriate command based on your terminal's current location.
+
+**🔹 If you are in the Root directory:**
+
+```powershell
 cd frontend
 npm run build
+```
+
+**🔹 If you are already inside the `frontend` directory:**
+
+```powershell
+npm run build
+```
 
 ### 3. Run the Backend Server
 
@@ -115,7 +125,7 @@ npm run build
 ```powershell
 cd backend
 uvicorn app.main:app --reload
-````
+```
 
 **🔹 If you are already inside the `backend` directory:**
 
@@ -158,7 +168,7 @@ curl -X 'POST' `
   -H 'accept: application/json' `
   -H 'Content-Type: application/json' `
   -d '{
-  "location": "Other",
+  "location": "mumbai",
   "carpet_area_sqft": 1200,
   "floor_num": 2,
   "bathroom": 2,
@@ -180,10 +190,18 @@ curl -X 'POST' `
 
 ![Backend Swagger 2](screenshots/backend-swagger-2.png)
 
-### 3. Frontend - Input Form
+### 3. Backend - API Response / Details
 
-![Frontend Form](screenshots/frontend-form.png)
+![Backend Swagger 3](screenshots/backend-swagger-3.png)
 
-### 4. Frontend - Prediction Result
+### 4. Frontend - Home Page
+
+![Frontend Home](screenshots/frontend-home.png)
+
+### 5. Frontend - Input Form
+
+![Frontend Form](screenshots/frontend-input-form.png)
+
+### 6. Frontend - Prediction Result
 
 ![Frontend Result](screenshots/frontend-result.png)
